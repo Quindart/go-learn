@@ -1,0 +1,3 @@
+EBT: 11
+Profit: 9
+Profit Margin: 39.130434782608695%
