@@ -13,13 +13,14 @@ func main(){
 	fmt.Print("Enter your choice: ")
 	fmt.Scanln(&choice)
 	
-	if choice == 1 {
+	switch choice {
+	case 1:
 		fmt.Println("You chose to check cost.")
-	} else if choice == 2 {
+	case 2:
 		fmt.Println("You chose to update cost with discount.")
-	} else if choice == 3 {
+	case 3:
 		fmt.Println("Exiting the program. Goodbye!")
-	} else {
+	default:
 		fmt.Println("Invalid choice. Please try again.")
 	}
 }

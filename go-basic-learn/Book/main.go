@@ -1,17 +1,19 @@
-package Book
+package book
+
+import "go-basic-learn/author"
 
 type Book struct {
 	name   string
-	author string
+	author author.Author
 	pages  int
 }
 
 // *Book = pointer to Book => &Book  = 0xancas
 // New creates a new instance of Book with the provided name, author, and number of pages.
-func New(name string, author string, pages int) *Book {
+func New(name string, authorName string, pages int) *Book {
 	return &Book{
 		name:   name,
-		author: author,
+		author: author.New(authorName),
 		pages:  pages,
 	}
 }
@@ -21,7 +23,7 @@ func (b *Book) GetName() string {
 }
 
 func (b *Book) GetAuthor() string {
-	return b.author
+	return b.author.GetName()
 }
 
 func (b *Book) GetPages() int {

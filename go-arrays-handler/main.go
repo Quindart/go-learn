@@ -18,6 +18,8 @@ func main() {
 	var stringLocation = &stringNames
 	fmt.Printf("String name: %v\n", stringNames)
 	fmt.Printf("String pointer: %v\n", *stringLocation)
+
+
 	fmt.Printf("[1:3]: %v\n", arr[1:3]) // -> 2, 3
 	fmt.Printf("[:3]: %v\n", arr[:3])   // -> 1, 2, 3
 	fmt.Printf("[:3]: %v\n", arr[:3])   // -> 1, 2, 3
@@ -38,4 +40,10 @@ func main() {
 	for i := 0; i < len(feat_price); i++ {
 		fmt.Printf("Featured price: %v : %v\n", &feat_price[i], feat_price[i])
 	}
+	// unpacking list in golang = destructuring list in javascript
+	list123 := []int{1,2,3}
+	list456 := []int{4,5,6}
+	merge := append(list123, list456...)
+	fmt.Println(merge)
+	
 }
