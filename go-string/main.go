@@ -17,7 +17,6 @@ func getUserInput(infoText string) float64 {
 	fmt.Scanln(&userInput)
 	return userInput
 }
-
 func handleCaculate(a,b float64) (float64, float64) {
 	return a + b, a * b
 }
