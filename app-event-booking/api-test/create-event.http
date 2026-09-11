@@ -1,0 +1,9 @@
+POST http://localhost:3001/events
+Content-Type: application/json
+
+{
+    "name": "Tét",
+    "description": "ABC ABCD",
+    "location": "HCM city",
+    "date" : "2025-01-01T15:40:00.00Z"
+}
