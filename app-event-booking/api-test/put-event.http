@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3001
+# Use the token of the user who created this event.
+@token = REPLACE_WITH_SIGNIN_TOKEN
+# Set this to the ID returned by create-event.http.
+@eventId = 1
+
+### Update an event owned by the signed-in user.
+PUT {{baseUrl}}/events/{{eventId}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Put event 1",
+    "description": "ABC ABCD",
+    "location": "HCM city",
+    "date" : "2025-01-01T15:40:00.00Z"
+}

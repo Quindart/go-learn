@@ -140,6 +140,26 @@ func UpdateByID(id int64, event Event) error {
 		event.Description,
 		event.Location,
 		event.Date,
+		id,
 	)
 	return err
+}
+
+func DeleteByID(id int64) error {
+	query := `
+		delete from events where id = ?
+	`
+	stmt, err := db.DB.Prepare(query)
+
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(id)
+
+	if err != nil {
+		return err
+	}
+	return nil
 }

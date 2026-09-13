@@ -1,5 +1,11 @@
-POST http://localhost:3001/events
+@baseUrl = http://localhost:3001
+# Run sign-in.http, then paste the response token here (without "Bearer").
+@token = REPLACE_WITH_SIGNIN_TOKEN
+
+### Create an event owned by the signed-in user.
+POST {{baseUrl}}/events
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "name": "Tét",
