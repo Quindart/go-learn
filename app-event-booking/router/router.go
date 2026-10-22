@@ -17,7 +17,6 @@ func RegisterRouter(server *gin.Engine) {
 		events.PUT("/:id", putEvent)
 		events.DELETE("/:id", deleteEvent)
 	}
-
 	server.POST("/signup", signup)
 	server.POST("/signin", sigin)
 }

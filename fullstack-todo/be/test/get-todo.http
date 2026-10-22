@@ -1,0 +1,10 @@
+GET  http://localhost:8600/todos
+
+
+# POST http://localhost:8600/todos
+# Content-Type: application/json
+
+# {
+#     "title": "title1",
+#     "description": "desc1"
+# }
