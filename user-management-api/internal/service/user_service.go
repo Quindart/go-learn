@@ -2,12 +2,27 @@ package service
 
 import "user-management-api/internal/repository"
 
-type UserService struct {
-	UserRepo *repository.InMemoryUserRepository
+type userService struct {
+	UserRepo repository.UserRepository
 }
 
-func NewUserService(repo *repository.InMemoryUserRepository) *UserService {
-	return &UserService{
+func NewUserService(repo repository.UserRepository) UserService {
+	return &userService{
 		UserRepo: repo,
 	}
+}
+
+func (service *userService) GetAllUsers() {
+	service.UserRepo.FindAll()
+}
+
+func (service *userService) CreateUser() {
+
+}
+
+func (service *userService) UpdateUser() {
+
+}
+func (service *userService) DeleteUser() {
+
 }

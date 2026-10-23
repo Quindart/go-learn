@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:8085
+@userUuid = replace-with-user-uuid
+@demoUuid = replace-with-demo-uuid
+
+### Get all users
+GET {{baseUrl}}/api/v1/users
+Accept: application/json
+
+### Create user
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+
+### Update user
+PUT {{baseUrl}}/api/v1/users/{{userUuid}}
+Content-Type: application/json
+
+{
+  "name": "Jane Doe Updated",
+  "email": "jane.updated@example.com"
+}
+
+### Delete user
+DELETE {{baseUrl}}/api/v1/users/{{userUuid}}
+Accept: application/json
+
+### Get all demos
+GET {{baseUrl}}/api/v1/demos
+Accept: application/json
+
+### Create demo
+POST {{baseUrl}}/api/v1/demos
+Content-Type: application/json
+
+{
+  "name": "Example demo",
+  "description": "Demo description"
+}
+
+### Update demo
+PUT {{baseUrl}}/api/v1/demos/{{demoUuid}}
+Content-Type: application/json
+
+{
+  "name": "Updated demo",
+  "description": "Updated demo description"
+}
+
+### Delete demo
+DELETE {{baseUrl}}/api/v1/demos/{{demoUuid}}
+Accept: application/json
