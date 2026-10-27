@@ -13,3 +13,10 @@ type DemoService interface {
 	UpdateDemo()
 	DeleteDemo()
 }
+
+type Demo2Service interface {
+	GetAllDemos()
+	CreateDemo()
+	UpdateDemo()
+	DeleteDemo()
+}

@@ -1,14 +1,17 @@
 @baseUrl = http://localhost:8085
+@apiKey = 717488be-91b6-40bd-9eb8-3dcaef669ebc
 @userUuid = replace-with-user-uuid
 @demoUuid = replace-with-demo-uuid
 
 ### Get all users
 GET {{baseUrl}}/api/v1/users
 Accept: application/json
+X-API-Key: {{apiKey}}
 
 ### Create user
 POST {{baseUrl}}/api/v1/users
 Content-Type: application/json
+X-API-Key: {{apiKey}}
 
 {
   "name": "Jane Doe",
@@ -18,6 +21,7 @@ Content-Type: application/json
 ### Update user
 PUT {{baseUrl}}/api/v1/users/{{userUuid}}
 Content-Type: application/json
+X-API-Key: {{apiKey}}
 
 {
   "name": "Jane Doe Updated",
@@ -27,14 +31,17 @@ Content-Type: application/json
 ### Delete user
 DELETE {{baseUrl}}/api/v1/users/{{userUuid}}
 Accept: application/json
+X-API-Key: {{apiKey}}
 
 ### Get all demos
 GET {{baseUrl}}/api/v1/demos
 Accept: application/json
+X-API-Key: {{apiKey}}
 
 ### Create demo
 POST {{baseUrl}}/api/v1/demos
 Content-Type: application/json
+X-API-Key: {{apiKey}}
 
 {
   "name": "Example demo",
@@ -44,6 +51,7 @@ Content-Type: application/json
 ### Update demo
 PUT {{baseUrl}}/api/v1/demos/{{demoUuid}}
 Content-Type: application/json
+X-API-Key: {{apiKey}}
 
 {
   "name": "Updated demo",
@@ -53,3 +61,4 @@ Content-Type: application/json
 ### Delete demo
 DELETE {{baseUrl}}/api/v1/demos/{{demoUuid}}
 Accept: application/json
+X-API-Key: {{apiKey}}

@@ -23,6 +23,7 @@ func NewApplication(cfg *config.Config) *Application {
 	modules := []Module{
 		NewUserModule(),
 		NewDemoModule(),
+		NewDemo2Module(),
 	}
 	routes.RegisterRouter(r, getModuleRoutes(modules)...)
 

@@ -15,3 +15,10 @@ type DemoRepository interface {
 	Update()
 	Delete()
 }
+type Demo2Repository interface {
+	FindAll()
+	Create()
+	FindByUUID()
+	Update()
+	Delete()
+}
